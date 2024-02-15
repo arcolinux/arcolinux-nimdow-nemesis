@@ -6,13 +6,15 @@ import std/[os, osproc, times, strutils, httpclient, options, strformat]
 #++++++++++++++++++++++++++++++++++++++++++#
 const
   ## main refresh intervals in seconds
-  UPDATE_INTERVAL = 40
+  UPDATE_INTERVAL = 10
   ## not used yet, more themes to come, see below theme section
   #THEME = "gruvbox_arrows"
   ## select city for weather, uses wttr.in
   CITY = "" #
   ## update weather in minutes
   UPDATE_WEATHER = 10
+  ## update checkupdate intervals in minutes
+  UPDATE_UPDATES = 20
   ## typically its either BAT0 or BAT1, not used yet, see getBatStatus.nim to change
   #BAT = "BAT0"
   ## date formatting
@@ -33,6 +35,10 @@ const
   VOL_ICON = " 󰕾 "
   ## Mute icon to display
   MUTE_ICON = " 󰖁 "
+  ## Keyboard Icon to display
+  KB_ICON = "  "
+  ## Update Icon to display
+  UPDATE_ICON = "   Updates: "
 
 #++++++++++++++++++++++++++++++++++++++++++#
 #                  THEME                   #
@@ -40,6 +46,7 @@ const
 # include themed arrows gruvbox or dracula, more to come
 #include themes/gruvbox_arrows
 include themes/dracula_arrows
+#include themes/nord_arrows
 
 
 #++++++++++++++++++++++++++++++++++++++++++#
@@ -53,8 +60,12 @@ include functions/getBatStatus
 include functions/getMemory
 # include weather function {getWeather()}
 include functions/getWeather
-# include Alsa volume levels function {getAlsa}
+# include Alsa volume levels function {getAlsa()}
 include functions/getAlsa
+# include keyboard layout function {getKeyboard()}
+include functions/getKeyboard
+# include updates from arch, function {getArchUpdates()}
+include functions/getArchUpdates
 
 
 # Function to set the string
@@ -67,6 +78,9 @@ proc main() =
     #+++++++++++++++++++++++++++
     #  CREATE STATUS STRING    #
     #+++++++++++++++++++++++++++
+    #Nord theme example, note ARROW_x where x is number that can used in all themes
+    #let sStatusString = fmt"{ARROW_6}{getArchUpdates()}{ARROW_7}{getWeather()}{ARROW_8}{getMemory()}{ARROW_9}{getBatStatus()}{ARROW_10}{getAlsa()}{ARROW_11}{getKeyboard()}{ARROW_12}{getDateTime()}{RESET}"
+
     # without battery
     # with arrows
     let sStatusString = fmt"{ARROW_CYAN}{ARROW_ORANGE}{getWeather()}{ARROW_PINK}{getMemory()}{ARROW_PURPLE}{getAlsa()}{ARROW_RED}{getDateTime()}{RESET}"
