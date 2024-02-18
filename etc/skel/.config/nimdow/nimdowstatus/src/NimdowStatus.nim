@@ -87,7 +87,7 @@ proc main() =
     #let sStatusString = fmt"{ARROW_4}{getArchUpdates()}{REGION}{ARROW_5}{getWeather()}{REGION}{ARROW_6}{getMemory()}{REGION}{ARROW_7}{getBatStatus()}{REGION}{ARROW_8}{getAlsa()}{REGION}{ARROW_9}{getKeyboard()}{REGION}{ARROW_10}{getDateTime()}{RESET}"
 
     # ARROWS without Battery
-    let sStatusString = fmt"{ARROW_4}{getArchUpdates()}{REGION}{ARROW_5}{getWeather()}{REGION}{ARROW_6}{getMemory()}{REGION}{ARROW_8}{getAlsa()}{REGION}{ARROW_9}{getKeyboard()}{REGION}{ARROW_10}{getDateTime()}{RESET}"
+    #let sStatusString = fmt"{ARROW_4}{getArchUpdates()}{REGION}{ARROW_5}{getWeather()}{REGION}{ARROW_6}{getMemory()}{REGION}{ARROW_8}{getAlsa()}{REGION}{ARROW_9}{getKeyboard()}{REGION}{ARROW_10}{getDateTime()}{RESET}"
     
     # CIRCLES with Battery
     #let sStatusString = fmt"{CIRCLE_4}{getArchUpdates()}{REGION}{CIRCLE_5}{getWeather()}{REGION}{CIRCLE_6}{getMemory()}{REGION}{CIRCLE_7}{getBatStatus()}{REGION}{CIRCLE_8}{getAlsa()}{REGION}{CIRCLE_9}{getKeyboard()}{REGION}{CIRCLE_10}{getDateTime()}{RESET}"
