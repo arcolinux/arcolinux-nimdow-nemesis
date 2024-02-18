@@ -83,7 +83,7 @@ proc main() =
 
     # without battery
     # with arrows
-    let sStatusString = fmt"{ARROW_CYAN}{ARROW_ORANGE}{getWeather()}{ARROW_PINK}{getMemory()}{ARROW_PURPLE}{getAlsa()}{ARROW_RED}{getDateTime()}{RESET}"
+    let sStatusString = fmt"{ARROW_6}{ARROW_7}{getWeather()}{ARROW_8}{getMemory()}{ARROW_9}{getAlsa()}{ARROW_10}{getDateTime()}{RESET}"
 
     # with battery
     # with arrows
