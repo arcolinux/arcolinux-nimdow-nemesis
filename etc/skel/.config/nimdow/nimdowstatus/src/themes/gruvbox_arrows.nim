@@ -56,6 +56,24 @@ const
   CIRCLE_14: string = RESET & FG&GRUVBOX14 & "" & RESET & BG&GRUVBOX14 #8ec07c 
   CIRCLE_15: string = RESET & FG&GRUVBOX15 & "" & RESET & BG&GRUVBOX15 #ebdbb2 
 
+  ANGLE_0: string = RESET & FG&GRUVBOX0 & "" & RESET & BG&GRUVBOX0    #282828  
+  ANGLE_1: string = RESET & FG&GRUVBOX1 & "" & RESET & BG&GRUVBOX1    #cc241d  
+  ANGLE_2: string = RESET & FG&GRUVBOX2 & "" & RESET & BG&GRUVBOX2    #98971a  
+  ANGLE_3: string = RESET & FG&GRUVBOX3 & "" & RESET & BG&GRUVBOX3    #d79921  
+  ANGLE_4: string = RESET & FG&GRUVBOX4 & "" & RESET & BG&GRUVBOX4    #458588  
+  ANGLE_5: string = RESET & FG&GRUVBOX5 & "" & RESET & BG&GRUVBOX5    #b16286  
+  ANGLE_6: string = RESET & FG&GRUVBOX6 & "" & RESET & BG&GRUVBOX6    #689d6a  
+  ANGLE_7: string = RESET & FG&GRUVBOX7 & "" & RESET & BG&GRUVBOX7    #a89984  
+  ANGLE_8: string = RESET & FG&GRUVBOX8 & "" & RESET & BG&GRUVBOX8    #928374  
+  ANGLE_9: string = RESET & FG&GRUVBOX9 & "" & RESET & BG&GRUVBOX9    #fb4934  
+  ANGLE_10: string = RESET & FG&GRUVBOX10 & "" & RESET & BG&GRUVBOX10 #b8bb26 
+  ANGLE_11: string = RESET & FG&GRUVBOX11 & "" & RESET & BG&GRUVBOX11 #fabd2f 
+  ANGLE_12: string = RESET & FG&GRUVBOX12 & "" & RESET & BG&GRUVBOX12 #83a598 
+  ANGLE_13: string = RESET & FG&GRUVBOX13 & "" & RESET & BG&GRUVBOX13 #d3869b 
+  ANGLE_14: string = RESET & FG&GRUVBOX14 & "" & RESET & BG&GRUVBOX14 #8ec07c 
+  ANGLE_15: string = RESET & FG&GRUVBOX15 & "" & RESET & BG&GRUVBOX15 #ebdbb2 
+  
+
 #[ Nimdow config.toml
 
   # Window settings  Gruvbox type theme

@@ -5,10 +5,10 @@ const
   BG: string = "\x1b[48;2;"
 
 
-  DRACULA0: string  = "80;250;123m"  #282a36
-  DRACULA1: string  = "80;250;123m"  #44475a
-  DRACULA2: string  = "80;250;123m"  #f8f8f2
-  DRACULA3: string  = "80;250;123m"  #6272a4
+  DRACULA0: string  = "40;42;54m"    #282a36
+  DRACULA1: string  = "68;71;90m"    #44475a
+  DRACULA2: string  = "248;248;242m" #f8f8f2
+  DRACULA3: string  = "98;114;164m"  #6272a4
   DRACULA4: string  = "139;233;253m" #8be9fd
   DRACULA5: string  = "80;250;123m"  #50fa7b
   DRACULA6: string  = "255;184;108m" #ffb86c
@@ -40,6 +40,18 @@ const
   CIRCLE_8: string = RESET & FG&DRACULA8 & "" & RESET & BG&DRACULA8    #bd93f9  
   CIRCLE_9: string = RESET & FG&DRACULA9 & "" & RESET & BG&DRACULA9    #ff5555 
   CIRCLE_10: string = RESET & FG&DRACULA10 & "" & RESET & BG&DRACULA10 #f1fa8c 
+
+  ANGLE_0: string = RESET & FG&DRACULA0 & "" & RESET & BG&DRACULA0     #282A36
+  ANGLE_1: string = RESET & FG&DRACULA1 & "" & RESET & BG&DRACULA1     #44475a  
+  ANGLE_2: string = RESET & FG&DRACULA2 & "" & RESET & BG&DRACULA2     #f8f8f2  
+  ANGLE_3: string = RESET & FG&DRACULA3 & "" & RESET & BG&DRACULA3     #6272a4  
+  ANGLE_4: string = RESET & FG&DRACULA4 & "" & RESET & BG&DRACULA4     #8be9fd  
+  ANGLE_5: string = RESET & FG&DRACULA5 & "" & RESET & BG&DRACULA5     #50fa7b  
+  ANGLE_6: string = RESET & FG&DRACULA6 & "" & RESET & BG&DRACULA6     #ffb86c  
+  ANGLE_7: string = RESET & FG&DRACULA7 & "" & RESET & BG&DRACULA7     #ff79c6  
+  ANGLE_8: string = RESET & FG&DRACULA8 & "" & RESET & BG&DRACULA8     #bd93f9  
+  ANGLE_9: string = RESET & FG&DRACULA9 & "" & RESET & BG&DRACULA9     #ff5555 
+  ANGLE_10: string = RESET & FG&DRACULA10 & "" & RESET & BG&DRACULA10  #f1fa8c 
   
 
 
