@@ -29,6 +29,22 @@ modifiers = [ "super", "shift" ]
 # command = "notify-send \"Id: %1, rx: %2, cx: %4, w: %6\""
 # clickRegion = 0
 
+[[startProcess]]
+command = "alacritty -e sudo pacman -Syu"
+clickRegion = 1
+
+[[startProcess]]
+command = "alacritty -e htop"
+clickRegion = 3
+
+[[startProcess]]
+command = "pavucontrol"
+clickRegion = 4
+
+[[startProcess]]
+command = "/usr/bin/xfce4-keyboard-settings"
+clickRegion = 5
+
 [autostart]
 exec = [
   "xsetroot -cursor_name left_ptr",

@@ -39,13 +39,15 @@ const
   KB_ICON = "  "
   ## Update Icon to display
   UPDATE_ICON = "   Updates: "
+  ## Regions for clickable statusbar
+  REGION: string = "\x1F" # Do not edit, use Nimdows config.toml to set
 
 #++++++++++++++++++++++++++++++++++++++++++#
 #                  THEME                   #
 #++++++++++++++++++++++++++++++++++++++++++#
-# include themed arrows gruvbox or dracula, more to come
-#include themes/gruvbox_arrows
-include themes/dracula_arrows
+# include themed arrows gruvbox, dracula or nord, more to come
+include themes/gruvbox_arrows
+#include themes/dracula_arrows
 #include themes/nord_arrows
 
 
@@ -71,6 +73,8 @@ include functions/getArchUpdates
 # Function to set the string
 proc setStatus(sStatus: string) =
   discard execShellCmd("xsetroot -name " & "\"" & sStatus & "\"")
+  #Debug/test from the terminal
+  #echo sStatus
 
 # Main loop
 proc main() =
@@ -78,25 +82,19 @@ proc main() =
     #+++++++++++++++++++++++++++
     #  CREATE STATUS STRING    #
     #+++++++++++++++++++++++++++
-    #Nord theme example, note ARROW_x where x is number that can used in all themes
-    #let sStatusString = fmt"{ARROW_6}{getArchUpdates()}{ARROW_7}{getWeather()}{ARROW_8}{getMemory()}{ARROW_9}{getBatStatus()}{ARROW_10}{getAlsa()}{ARROW_11}{getKeyboard()}{ARROW_12}{getDateTime()}{RESET}"
 
-    # without battery
-    # with arrows
-    let sStatusString = fmt"{ARROW_CYAN}{ARROW_ORANGE}{getWeather()}{ARROW_PINK}{getMemory()}{ARROW_PURPLE}{getAlsa()}{ARROW_RED}{getDateTime()}{RESET}"
+    # ARROWS with Battery
+    #let sStatusString = fmt"{ARROW_4}{getArchUpdates()}{REGION}{ARROW_5}{getWeather()}{REGION}{ARROW_6}{getMemory()}{REGION}{ARROW_7}{getBatStatus()}{REGION}{ARROW_8}{getAlsa()}{REGION}{ARROW_9}{getKeyboard()}{REGION}{ARROW_10}{getDateTime()}{RESET}"
 
-    # with battery
-    # with arrows
-    #let sStatusString = fmt"{ARROW_CYAN}{ARROW_GREEN}{getWeather()}{ARROW_ORANGE}{getBatStatus()}{ARROW_PINK}{getMemory()}{ARROW_PURPLE}{getAlsa()}{ARROW_RED}{getDateTime()}{RESET}"
-
-    # with rounded corner
-    # without battery    
-    #let sStatusString = fmt"{CIRCLE_GREEN_L}{getWeather()}{CIRCLE_GREEN_R}{CIRCLE_BLUE_L}{getMemory()}{CIRCLE_BLUE_R}{CIRCLE_RED_L}{getDateTime()}{CIRCLE_RED_R}{RESET}"
+    # ARROWS without Battery
+    let sStatusString = fmt"{ARROW_4}{getArchUpdates()}{REGION}{ARROW_5}{getWeather()}{REGION}{ARROW_6}{getMemory()}{REGION}{ARROW_8}{getAlsa()}{REGION}{ARROW_9}{getKeyboard()}{REGION}{ARROW_10}{getDateTime()}{RESET}"
     
-    # with rounded corner
-    # with battery    
-    #let sStatusString = fmt"{CIRCLE_GREEN_L}{getWeather()}{CIRCLE_GREEN_R}{CIRCLE_ORANGE_L}{getBatStatus()}{CIRCLE_ORANGE_R}{CIRCLE_BLUE_L}{getMemory()}{CIRCLE_BLUE_R}{CIRCLE_RED_L}{getDateTime()}{CIRCLE_RED_R}{RESET}"
-    
+    # CIRCLES with Battery
+    #let sStatusString = fmt"{CIRCLE_4}{getArchUpdates()}{REGION}{CIRCLE_5}{getWeather()}{REGION}{CIRCLE_6}{getMemory()}{REGION}{CIRCLE_7}{getBatStatus()}{REGION}{CIRCLE_8}{getAlsa()}{REGION}{CIRCLE_9}{getKeyboard()}{REGION}{CIRCLE_10}{getDateTime()}{RESET}"
+
+    # CIRCLES without Battery
+    #let sStatusString = fmt"{CIRCLE_4}{getArchUpdates()}{REGION}{CIRCLE_5}{getWeather()}{REGION}{CIRCLE_6}{getMemory()}{REGION}{CIRCLE_8}{getAlsa()}{REGION}{CIRCLE_9}{getKeyboard()}{REGION}{CIRCLE_10}{getDateTime()}{RESET}"
+
     # set the status
     setStatus(sStatusString)
     # sleep for n seconds
