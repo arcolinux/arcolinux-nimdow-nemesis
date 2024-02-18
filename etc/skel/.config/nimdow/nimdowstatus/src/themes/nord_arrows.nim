@@ -3,7 +3,6 @@ const
   RESET: string  = "\x1b[0m"
   FG: string = "\x1b[38;2;"
   BG: string = "\x1b[48;2;"
-  regin: string = "\x1F"
 
 
   NORD0: string  = "46;52;64m"    #2E3440
@@ -57,6 +56,23 @@ const
   CIRCLE_13: string = RESET & FG&NORD13 & "" & RESET & BG&NORD13 #EBCB8B 
   CIRCLE_14: string = RESET & FG&NORD14 & "" & RESET & BG&NORD14 #A3BE8C 
   CIRCLE_15: string = RESET & FG&NORD15 & "" & RESET & BG&NORD15 #B48EAD 
+
+  ANGLE_0: string = RESET & FG&NORD0 & "" & RESET & BG&NORD0     #2E3440  
+  ANGLE_1: string = RESET & FG&NORD1 & "" & RESET & BG&NORD1     #3B4252  
+  ANGLE_2: string = RESET & FG&NORD2 & "" & RESET & BG&NORD2     #434C5E  
+  ANGLE_3: string = RESET & FG&NORD3 & "" & RESET & BG&NORD3     #4C566A  
+  ANGLE_4: string = RESET & FG&NORD4 & "" & RESET & BG&NORD4     #D8DEE9  
+  ANGLE_5: string = RESET & FG&NORD5 & "" & RESET & BG&NORD5     #E5E9F0  
+  ANGLE_6: string = RESET & FG&NORD6 & "" & RESET & BG&NORD6     #ECEFF4  
+  ANGLE_7: string = RESET & FG&NORD7 & "" & RESET & BG&NORD7     #8FBCBB  
+  ANGLE_8: string = RESET & FG&NORD8 & "" & RESET & BG&NORD8     #88C0D0  
+  ANGLE_9: string = RESET & FG&NORD9 & "" & RESET & BG&NORD9     #81A1C1  
+  ANGLE_10: string = RESET & FG&NORD10 & "" & RESET & BG&NORD10  #5E81AC 
+  ANGLE_11: string = RESET & FG&NORD11 & "" & RESET & BG&NORD11  #BF616A 
+  ANGLE_12: string = RESET & FG&NORD12 & "" & RESET & BG&NORD12  #D08770 
+  ANGLE_13: string = RESET & FG&NORD13 & "" & RESET & BG&NORD13  #EBCB8B 
+  ANGLE_14: string = RESET & FG&NORD14 & "" & RESET & BG&NORD14  #A3BE8C 
+  ANGLE_15: string = RESET & FG&NORD15 & "" & RESET & BG&NORD15  #B48EAD 
 
 
 #[
