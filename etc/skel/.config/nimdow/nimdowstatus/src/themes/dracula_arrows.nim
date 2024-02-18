@@ -5,35 +5,42 @@ const
   BG: string = "\x1b[48;2;"
 
 
-  BACKGROUND: string  = "80;250;123m" #282a36
-  CURRENTLINE: string = "80;250;123m" #44475a
-  FOREGROUND: string  = "80;250;123m" #f8f8f2
-  COMMENT: string     = "80;250;123m" #6272a4
+  DRACULA0: string  = "80;250;123m"  #282a36
+  DRACULA1: string  = "80;250;123m"  #44475a
+  DRACULA2: string  = "80;250;123m"  #f8f8f2
+  DRACULA3: string  = "80;250;123m"  #6272a4
+  DRACULA4: string  = "139;233;253m" #8be9fd
+  DRACULA5: string  = "80;250;123m"  #50fa7b
+  DRACULA6: string  = "255;184;108m" #ffb86c
+  DRACULA7: string  = "255;121;198m" #ff79c6
+  DRACULA8: string  = "189;147;249m" #bd93f9
+  DRACULA9: string = "255;85;85m"    #ff5555
+  DRACULA10: string = "241;250;140m" #f1fa8c
 
-  CYAN: string     = "139;233;253m" #8be9fd
-  GREEN: string    = "80;250;123m"  #50fa7b
-  ORANGE: string   = "255;184;108m" #ffb86c
-  PINK:  string    = "255;121;198m" #ff79c6
-  PURPLE: string   = "189;147;249m" #bd93f9
-  RED: string      = "255;85;85m"   #ff5555
-  YELLOW: string   = "241;250;140m" #f1fa8c
+  ARROW_0: string = RESET & FG&DRACULA0 & "" & RESET & BG&DRACULA0     #282A36
+  ARROW_1: string = RESET & FG&DRACULA1 & "" & RESET & BG&DRACULA1     #44475a  
+  ARROW_2: string = RESET & FG&DRACULA2 & "" & RESET & BG&DRACULA2     #f8f8f2  
+  ARROW_3: string = RESET & FG&DRACULA3 & "" & RESET & BG&DRACULA3     #6272a4  
+  ARROW_4: string = RESET & FG&DRACULA4 & "" & RESET & BG&DRACULA4     #8be9fd  
+  ARROW_5: string = RESET & FG&DRACULA5 & "" & RESET & BG&DRACULA5     #50fa7b  
+  ARROW_6: string = RESET & FG&DRACULA6 & "" & RESET & BG&DRACULA6     #ffb86c  
+  ARROW_7: string = RESET & FG&DRACULA7 & "" & RESET & BG&DRACULA7     #ff79c6  
+  ARROW_8: string = RESET & FG&DRACULA8 & "" & RESET & BG&DRACULA8     #bd93f9  
+  ARROW_9: string = RESET & FG&DRACULA9 & "" & RESET & BG&DRACULA9     #ff5555 
+  ARROW_10: string = RESET & FG&DRACULA10 & "" & RESET & BG&DRACULA10  #f1fa8c 
 
-
-  ARROW_CYAN: string   = RESET & FG&CYAN & "" & RESET & BG&CYAN      #8be9fd
-  ARROW_GREEN: string  = RESET & FG&GREEN & "" & RESET & BG&GREEN    #50fa7b
-  ARROW_ORANGE: string = RESET & FG&ORANGE & "" & RESET & BG&ORANGE  #ffb86c
-  ARROW_PINK: string   = RESET & FG&PINK & "" & RESET & BG&PINK      #ff79c6
-  ARROW_PURPLE: string = RESET & FG&PURPLE & "" & RESET & BG&PURPLE  #bd93f9
-  ARROW_RED: string    = RESET & FG&RED & "" & RESET & BG&RED        #ff5555
-  ARROW_YELLOW: string = RESET & FG&YELLOW & "" & RESET & BG&YELLOW  #f1fa8c
-
-  CIRCLE_CYAN: string   = RESET & FG&CYAN & "" & RESET & BG&CYAN      #8be9fd
-  CIRCLE_GREEN: string  = RESET & FG&GREEN & "" & RESET & BG&GREEN    #50fa7b
-  CIRCLE_ORANGE: string = RESET & FG&ORANGE & "" & RESET & BG&ORANGE  #ffb86c
-  CIRCLE_PINK: string   = RESET & FG&PINK & "" & RESET & BG&PINK      #ff79c6
-  CIRCLE_PURPLE: string = RESET & FG&PURPLE & "" & RESET & BG&PURPLE  #bd93f9
-  CIRCLE_RED: string    = RESET & FG&RED & "" & RESET & BG&RED        #ff5555
-  CIRCLE_YELLOW: string = RESET & FG&YELLOW & "" & RESET & BG&YELLOW  #f1fa8c
+  CIRCLE_0: string = RESET & FG&DRACULA0 & "" & RESET & BG&DRACULA0    #282A36
+  CIRCLE_1: string = RESET & FG&DRACULA1 & "" & RESET & BG&DRACULA1    #44475a  
+  CIRCLE_2: string = RESET & FG&DRACULA2 & "" & RESET & BG&DRACULA2    #f8f8f2  
+  CIRCLE_3: string = RESET & FG&DRACULA3 & "" & RESET & BG&DRACULA3    #6272a4  
+  CIRCLE_4: string = RESET & FG&DRACULA4 & "" & RESET & BG&DRACULA4    #8be9fd  
+  CIRCLE_5: string = RESET & FG&DRACULA5 & "" & RESET & BG&DRACULA5    #50fa7b  
+  CIRCLE_6: string = RESET & FG&DRACULA6 & "" & RESET & BG&DRACULA6    #ffb86c  
+  CIRCLE_7: string = RESET & FG&DRACULA7 & "" & RESET & BG&DRACULA7    #ff79c6  
+  CIRCLE_8: string = RESET & FG&DRACULA8 & "" & RESET & BG&DRACULA8    #bd93f9  
+  CIRCLE_9: string = RESET & FG&DRACULA9 & "" & RESET & BG&DRACULA9    #ff5555 
+  CIRCLE_10: string = RESET & FG&DRACULA10 & "" & RESET & BG&DRACULA10 #f1fa8c 
+  
 
 
 #[ Nimdow config.toml
