@@ -10,7 +10,7 @@ const
   ## not used yet, more themes to come, see below theme section
   #THEME = "gruvbox_arrows"
   ## select city for weather, uses wttr.in
-  CITY = "" #
+  CITY = "Perth" #
   ## update weather in minutes
   UPDATE_WEATHER = 10
   ## update checkupdate intervals in minutes
@@ -45,10 +45,11 @@ const
 #++++++++++++++++++++++++++++++++++++++++++#
 #                  THEME                   #
 #++++++++++++++++++++++++++++++++++++++++++#
-# include themed arrows gruvbox, dracula or nord, more to come
-#include themes/gruvbox_arrows
-#include themes/dracula_arrows
-include themes/nord_arrows
+# include themed arrows/circles/angle in gruvbox, dracula, nord and catpuccin
+#include themes/gruvbox
+#include themes/dracula
+#include themes/nord
+include themes/catpuccin
 
 
 #++++++++++++++++++++++++++++++++++++++++++#
@@ -90,16 +91,16 @@ proc main() =
     #let sStatusString = fmt"{ARROW_4}{getArchUpdates()}{REGION}{ARROW_5}{getWeather()}{REGION}{ARROW_6}{getMemory()}{REGION}{ARROW_8}{getAlsa()}{REGION}{ARROW_9}{getKeyboard()}{REGION}{ARROW_10}{getDateTime()}{RESET}"
     
     # CIRCLES with Battery
-    #let sStatusString = fmt"{CIRCLE_4}{getArchUpdates()}{REGION}{CIRCLE_5}{getWeather()}{REGION}{CIRCLE_6}{getMemory()}{REGION}{CIRCLE_7}{getBatStatus()}{REGION}{CIRCLE_8}{getAlsa()}{REGION}{CIRCLE_9}{getKeyboard()}{REGION}{CIRCLE_10}{getDateTime()}{RESET}"
+    let sStatusString = fmt"{CIRCLE_11}{getArchUpdates()}{REGION}{CIRCLE_13}{getWeather()}{REGION}{CIRCLE_7}{getMemory()}{REGION}{CIRCLE_15}{getBatStatus()}{REGION}{CIRCLE_11}{getAlsa()}{REGION}{CIRCLE_4}{getKeyboard()}{REGION}{CIRCLE_12}{getDateTime()}{RESET}"
 
     # CIRCLES without Battery
     #let sStatusString = fmt"{CIRCLE_4}{getArchUpdates()}{REGION}{CIRCLE_5}{getWeather()}{REGION}{CIRCLE_6}{getMemory()}{REGION}{CIRCLE_8}{getAlsa()}{REGION}{CIRCLE_9}{getKeyboard()}{REGION}{CIRCLE_10}{getDateTime()}{RESET}"
 
     # ANGLES with Battery
-    #let sStatusString = fmt"{ANGLE_4}{getArchUpdates()}{REGION}{ANGLE_5}{getWeather()}{REGION}{ANGLE_6}{getMemory()}{REGION}{ANGLE_7}{getBatStatus()}{REGION}{ANGLE_8}{getAlsa()}{REGION}{ANGLE_9}{getKeyboard()}{REGION}{ANGLE_10}{getDateTime()}{RESET}"
+    #let sStatusString = fmt"{ANGLE_11}{getArchUpdates()}{REGION}{ANGLE_13}{getWeather()}{REGION}{ANGLE_7}{getMemory()}{REGION}{ANGLE_15}{getBatStatus()}{REGION}{ANGLE_11}{getAlsa()}{REGION}{ANGLE_4}{getKeyboard()}{REGION}{ANGLE_12}{getDateTime()}{RESET}"
 
     # ANGLES without Battery
-    let sStatusString = fmt"{ANGLE_4}{getArchUpdates()}{REGION}{ANGLE_5}{getWeather()}{REGION}{ANGLE_6}{getMemory()}{REGION}{ANGLE_8}{getAlsa()}{REGION}{ANGLE_9}{getKeyboard()}{REGION}{ANGLE_10}{getDateTime()}{RESET}"
+    #let sStatusString = fmt"{ANGLE_4}{getArchUpdates()}{REGION}{ANGLE_5}{getWeather()}{REGION}{ANGLE_6}{getMemory()}{REGION}{ANGLE_8}{getAlsa()}{REGION}{ANGLE_9}{getKeyboard()}{REGION}{ANGLE_10}{getDateTime()}{RESET}"
 
     # set the status
     setStatus(sStatusString)
