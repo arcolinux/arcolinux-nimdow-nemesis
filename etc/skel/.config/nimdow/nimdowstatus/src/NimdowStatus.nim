@@ -34,7 +34,7 @@ const
   ## memory icon to display
   MEMORY_ICON = "  "
   ## Volume icon to display
-  VOL_ICON = " 󰕾 "
+  VOL_ICON = "  "
   ## Mute icon to display
   MUTE_ICON = " 󰖁 "
   ## Keyboard Icon to display
