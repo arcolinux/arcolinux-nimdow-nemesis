@@ -34,7 +34,7 @@ command = "alacritty -e sudo pacman -Syu"
 clickRegion = 1
 
 [[startProcess]]
-command = "alacritty -e htop"
+command = "alacritty -e btop"
 clickRegion = 3
 
 [[startProcess]]
@@ -54,17 +54,22 @@ exec = [
 [settings]
   # Window settings - Dracula type theme
   borderWidth = 1
-  borderColorUnfocused = "#6272a4"
-  borderColorFocused = "#ff79c6"
-  borderColorUrgent = "#ff5555"
+  borderColorUnfocused = "#585b70"
+  borderColorFocused = "#f5c2e7"
+  borderColorUrgent = "#f38ba8"
   # Bar settings
-  barHeight = 22
+  barHeight = 26
   windowTitlePosition = "center"
-  barBackgroundColor = "#282a36"
-  barForegroundColor = "#44475a"
-  barSelectionColor = "#f1fa8c"
-  barUrgentColor = "#ff5555"
-  barFonts = ["Noto:style=Bold:size=11:antialias=true", "JetBrainsMono Nerd Font Mono:size=19:antialias=true"]
+  barBackgroundColor = "#45475a"
+  barForegroundColor = "#0d1117"
+  barSelectionColor = "#F5E0DC"
+  barUrgentColor = "#f38ba8"
+  barFonts = [
+    "DejaVu Sans:style=Bold:size=10:antialias=true",
+    "FontAwesome:size=14:antialias=true",
+    "JetBrainsMono Nerd Font:size=16:antialias=true",
+  ]
+
   # Layout settings
   gapSize = 10
   outerGap = 10
@@ -207,6 +212,16 @@ exec = [
 # Example monitor settings:
  [monitors]
    [monitors.default.tags]
+  # 1.displayString = "󰲠"
+  # 2.displayString = "󰲢"
+  # 3.displayString = "󰲤"
+  # 4.displayString = "󰲦"
+  # 5.displayString = "󰲨"
+  # 6.displayString = "󰲪"
+  # 7.displayString = "󰲬"
+  # 8.displayString = "󰲮"
+  # 9.displayString = "󰲰"
+
    1.displayString = "󰎤"
    2.displayString = "󰎧"
    3.displayString = "󰎪"
@@ -217,8 +232,8 @@ exec = [
    8.displayString = "󰎹"
    9.displayString = "󰎼"
   # Set the number of master windows for ALL monitors.
-  # all.numMasterWindows = 2
-  # all.defaultMasterWidthPercentage = 60
+   all.numMasterWindows = 2
+   all.defaultMasterWidthPercentage = 60
 
   # [monitors.1.tags]
   # 2.displayString = "two"
