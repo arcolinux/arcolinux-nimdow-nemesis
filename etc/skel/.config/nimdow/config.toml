@@ -39,11 +39,11 @@ clickRegion = 3
 
 [[startProcess]]
 command = "pavucontrol"
-clickRegion = 5
+clickRegion = 4
 
 [[startProcess]]
 command = "/usr/bin/xfce4-keyboard-settings"
-clickRegion = 6
+clickRegion = 5
 
 [autostart]
 exec = [
@@ -212,28 +212,28 @@ exec = [
 # Example monitor settings:
  [monitors]
    [monitors.default.tags]
-   1.displayString = "󰲠"
-   2.displayString = "󰲢"
-   3.displayString = "󰲤"
-   4.displayString = "󰲦"
-   5.displayString = "󰲨"
-   6.displayString = "󰲪"
-   7.displayString = "󰲬"
-   8.displayString = "󰲮"
-   9.displayString = "󰲰"
+  # 1.displayString = "󰲠"
+  # 2.displayString = "󰲢"
+  # 3.displayString = "󰲤"
+  # 4.displayString = "󰲦"
+  # 5.displayString = "󰲨"
+  # 6.displayString = "󰲪"
+  # 7.displayString = "󰲬"
+  # 8.displayString = "󰲮"
+  # 9.displayString = "󰲰"
 
-  # 1.displayString = "󰎤"
-  # 2.displayString = "󰎧"
-  # 3.displayString = "󰎪"
-  # 4.displayString = "󰎭"
-  # 5.displayString = "󰎱"
-  # 6.displayString = "󰎳"
-  # 7.displayString = "󰎶"
-  # 8.displayString = "󰎹"
-  # 9.displayString = "󰎼"
+   1.displayString = "󰎤"
+   2.displayString = "󰎧"
+   3.displayString = "󰎪"
+   4.displayString = "󰎭"
+   5.displayString = "󰎱"
+   6.displayString = "󰎳"
+   7.displayString = "󰎶"
+   8.displayString = "󰎹"
+   9.displayString = "󰎼"
   # Set the number of master windows for ALL monitors.
-  # all.numMasterWindows = 2
-  # all.defaultMasterWidthPercentage = 60
+   all.numMasterWindows = 2
+   all.defaultMasterWidthPercentage = 60
 
   # [monitors.1.tags]
   # 2.displayString = "two"
