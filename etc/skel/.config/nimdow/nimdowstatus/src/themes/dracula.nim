@@ -42,17 +42,17 @@ const
   CLINE_9: string = FG&DRACULA9 & "" & RESET & BG&DRACULA9    #ff5555 
   CLINE_10: string = FG&DRACULA10 & "" & RESET & BG&DRACULA10 #f1fa8c 
 
-  ALINE_0L: string = FG&DRACULA0 & "" & RESET & BG&DRACULA0     #282A36
-  ALINE_1L: string = FG&DRACULA1 & "" & RESET & BG&DRACULA1     #44475a  
-  ALINE_2L: string = FG&DRACULA2 & "" & RESET & BG&DRACULA2     #f8f8f2  
-  ALINE_3L: string = FG&DRACULA3 & "" & RESET & BG&DRACULA3     #6272a4  
-  ALINE_4L: string = FG&DRACULA4 & "" & RESET & BG&DRACULA4     #8be9fd  
-  ALINE_5L: string = FG&DRACULA5 & "" & RESET & BG&DRACULA5     #50fa7b  
-  ALINE_6L: string = FG&DRACULA6 & "" & RESET & BG&DRACULA6     #ffb86c  
-  ALINE_7L: string = FG&DRACULA7 & "" & RESET & BG&DRACULA7     #ff79c6  
-  ALINE_8L: string = FG&DRACULA8 & "" & RESET & BG&DRACULA8     #bd93f9  
-  ALINE_9L: string = FG&DRACULA9 & "" & RESET & BG&DRACULA9     #ff5555 
-  ALINE_10L: string = FG&DRACULA10 & "" & RESET & BG&DRACULA10  #f1fa8c 
+  ALINE_0: string = FG&DRACULA0 & "" & RESET & BG&DRACULA0     #282A36
+  ALINE_1: string = FG&DRACULA1 & "" & RESET & BG&DRACULA1     #44475a  
+  ALINE_2: string = FG&DRACULA2 & "" & RESET & BG&DRACULA2     #f8f8f2  
+  ALINE_3: string = FG&DRACULA3 & "" & RESET & BG&DRACULA3     #6272a4  
+  ALINE_4: string = FG&DRACULA4 & "" & RESET & BG&DRACULA4     #8be9fd  
+  ALINE_5: string = FG&DRACULA5 & "" & RESET & BG&DRACULA5     #50fa7b  
+  ALINE_6: string = FG&DRACULA6 & "" & RESET & BG&DRACULA6     #ffb86c  
+  ALINE_7: string = FG&DRACULA7 & "" & RESET & BG&DRACULA7     #ff79c6  
+  ALINE_8: string = FG&DRACULA8 & "" & RESET & BG&DRACULA8     #bd93f9  
+  ALINE_9: string = FG&DRACULA9 & "" & RESET & BG&DRACULA9     #ff5555 
+  ALINE_10: string = FG&DRACULA10 & "" & RESET & BG&DRACULA10  #f1fa8c 
 
   ARROW_0L: string = RESET & FG&DRACULA0 & "" & RESET & BG&DRACULA0     #282A36
   ARROW_1L: string = RESET & FG&DRACULA1 & "" & RESET & BG&DRACULA1     #44475a  
