@@ -54,20 +54,21 @@ exec = [
 [settings]
   # Window settings - Dracula type theme
   borderWidth = 1
-  borderColorUnfocused = "#585b70"
-  borderColorFocused = "#f5c2e7"
-  borderColorUrgent = "#f38ba8"
+  borderColorUnfocused = "#6272a4"
+  borderColorFocused = "#ff79c6"
+  borderColorUrgent = "#ff5555"
   # Bar settings
-  barHeight = 24
+  barHeight = 22
   windowTitlePosition = "center"
-  barBackgroundColor = "#45475a"
-  barForegroundColor = "#0d1117"
-  barSelectionColor = "#F5E0DC"
-  barUrgentColor = "#f38ba8"
+  barBackgroundColor = "#282a36"
+  barForegroundColor = "#44475a"
+  barSelectionColor = "#f1fa8c"
+  barUrgentColor = "#ff5555"
   barFonts = [
-    "DejaVu Sans:style=Bold:size=10:antialias=true",
-    "FontAwesome:size=14:antialias=true",
-    "JetBrainsMono Nerd Font:size=16:antialias=true",
+  "Noto:style=Bold:size=11:antialias=true",
+  "FontAwesome:size=14:antialias=true",
+	"JetBrainsMono Nerd Font:size=16:antialias=true",
+  "DejaVu Sans:style=Bold:size=10:antialias=true",
   ]
 
   # Layout settings
@@ -232,8 +233,8 @@ exec = [
    8.displayString = "󰎹"
    9.displayString = "󰎼"
   # Set the number of master windows for ALL monitors.
-   all.numMasterWindows = 2
-   all.defaultMasterWidthPercentage = 60
+  # all.numMasterWindows = 2
+  # all.defaultMasterWidthPercentage = 60
 
   # [monitors.1.tags]
   # 2.displayString = "two"

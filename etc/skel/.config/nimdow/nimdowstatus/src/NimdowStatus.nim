@@ -49,9 +49,9 @@ const
 #++++++++++++++++++++++++++++++++++++++++++#
 # include themed arrows/circles/angle in gruvbox, dracula, nord and catpuccin
 #include themes/gruvbox
-#include themes/dracula
+include themes/dracula
 #include themes/nord
-include themes/catpuccin
+#include themes/catpuccin
 
 
 #++++++++++++++++++++++++++++++++++++++++++#
