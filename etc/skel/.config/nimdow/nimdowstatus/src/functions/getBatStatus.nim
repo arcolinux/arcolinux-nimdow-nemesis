@@ -5,8 +5,9 @@ proc getBatStatus(): string =
     return BATTERY_ICON[1] & "N/A" #isEmpty
   else:
     # Read the first line of the these files
-    let sCapacity = "/sys/class/power_supply/BAT0/capacity".readLines()
-    let sBatStats = "/sys/class/power_supply/BAT0/status".readLines()
+
+    let sBatStats = readLines("/sys/class/power_supply/BAT0/status", 1)
+    let sCapacity = readLines("/sys/class/power_supply/BAT0/capacity", 1)
 
   # Place holder for the battery icon
     var sBatIcon = ""

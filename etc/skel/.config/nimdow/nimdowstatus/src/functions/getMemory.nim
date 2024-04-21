@@ -1,7 +1,7 @@
 const
   MEMINFO_PATH: string = "/proc/meminfo"
-  MEMINFO_LINES: int = 26
   GIB_DIVISOR: float = 1024.0 * 1024.0
+  MIB_DIVISOR: int = 1024
 
 proc getMemInfo(key: string): int =
   for line in readFile(MEMINFO_PATH).splitLines():
@@ -15,13 +15,22 @@ proc getMemory(): string =
     return "Memory info not available"
 
   let
-    iTotalMem = getMemInfo("MemTotal")
-    iAvailableMem = getMemInfo("MemAvailable")
+    iMemTotal = getMemInfo("MemTotal")
+    iMemFree = getMemInfo("MemFree")
+    iMemAvailable = getMemInfo("MemAvailable")
+    iBuffers = getMemInfo("Buffers")
+    iCached = getMemInfo("Cached")
+    iShmem = getMemInfo("Shmem")
+    iSReclaimable = getMemInfo("SReclaimable")
 
-    iUsedMem = iTotalMem - iAvailableMem
+    # Htop method of calculating used memory
+    iUsedMem = iMemTotal - (iMemFree + iBuffers + iCached) + (iShmem - iSReclaimable)
 
-  if iUsedMem >= 1048576:
+    # Standard method, free, btop pytop ect..
+    # iUsedMem = iMemTotal - iMemAvailable
+
+  if iUsedMem >= 1048576: # Check to see if used mem is 1GB or greater
     result = fmt"{MEMORY_ICON} {iUsedMem.float / GIB_DIVISOR:0.2f} GiB"
   else:
-    result = fmt"{MEMORY_ICON} {toInt(iUsedMem / 1024)} MiB"
+    result = fmt"{MEMORY_ICON} {iUsedMem div MIB_DIVISOR} MiB"
 
