@@ -6,11 +6,11 @@ import std/[os, osproc, times, strutils, httpclient, options, strformat]
 #++++++++++++++++++++++++++++++++++++++++++#
 const
   ## main refresh intervals in seconds
-  UPDATE_INTERVAL = 10
+  UPDATE_INTERVAL = 1
   ## update weather in minutes
-  UPDATE_WEATHER = 10
+  UPDATE_WEATHER = 5
   ## update checkupdate(arch) intervals in minutes
-  UPDATE_UPDATES = 20
+  UPDATE_UPDATES = 5
   ## select city for weather, uses wttr.in
   CITY = "Perth" #
   ## date formatting
@@ -34,7 +34,7 @@ const
   ## memory icon to display
   MEMORY_ICON = ""
   ## Volume icon to display
-  VOL_ICON = " "
+  VOL_ICON = ""
   ## Mute icon to display
   MUTE_ICON = " 󰖁"
   ## Keyboard Icon to display
@@ -67,6 +67,8 @@ include functions/getMemory
 include functions/getWeather
 # include Alsa volume levels function {getAlsa()}
 include functions/getAlsa
+# include PulseAudio volume levels function {getAlsa()}
+include functions/getPulse
 # include keyboard layout function {getKeyboard()}
 include functions/getKeyboard
 # include updates from arch, function {getArchUpdates()}
@@ -102,9 +104,9 @@ proc main() =
     #let sStatusString = fmt"{ALINE_4}{getArchUpdates()}{REGION}{ALINE_5}{getWeather()}{REGION}{ALINE_6}{getMemory()}{REGION}{ALINE_8}{getAlsa()}{REGION}{ALINE_9}{getKeyboard()}{REGION}{ALINE_10}{getDateTime()}{REGION}{RESET}"
 
     # RIGHT ANGLES with Battery(uses =< _10 colours for Dracula theme)
-    let sStatusString = fmt"{RANGLE_11L}{getArchUpdates()}{RANGLE_11R}{REGION}{RANGLE_13L}{getWeather()}{RANGLE_13R}{REGION}{RANGLE_7L}{getMemory()}{RANGLE_7R}{REGION}{RANGLE_15L}{getBatStatus()}{RANGLE_15R}{REGION}{RANGLE_14L}{getAlsa()}{RANGLE_14R}{REGION}{RANGLE_4L}{getKeyboard()}{RANGLE_4R}{REGION}{RANGLE_12L}{getDateTime()}{RANGLE_12R}{REGION}{RESET}"
+    #let sStatusString = fmt"{RANGLE_11L}{getArchUpdates()}{RANGLE_11R}{REGION}{RANGLE_13L}{getWeather()}{RANGLE_13R}{REGION}{RANGLE_7L}{getMemory()}{RANGLE_7R}{REGION}{RANGLE_15L}{getBatStatus()}{RANGLE_15R}{REGION}{RANGLE_14L}{getAlsa()}{RANGLE_14R}{REGION}{RANGLE_4L}{getKeyboard()}{RANGLE_4R}{REGION}{RANGLE_12L}{getDateTime()}{RANGLE_12R}{REGION}{RESET}"
     # RIGHT ANGLES without Battery(uses =< _10 colours for Dracula theme)
-    #let sStatusString = fmt"{RANGLE_13L}{getArchUpdates()}{RANGLE_13R}{REGION}{RANGLE_14L}{getWeather()}{RANGLE_14R}{REGION}{RANGLE_11L}{getMemory()}{RANGLE_11R}{REGION}{RANGLE_4L}{getAlsa()}{RANGLE_4R}{REGION}{RANGLE_7L}{getKeyboard()}{RANGLE_7R}{REGION}{RANGLE_12L}{getDateTime()}{RANGLE_12R}{REGION}{RESET}"
+    let sStatusString = fmt"{RANGLE_13L}{getArchUpdates()}{RANGLE_13R}{REGION}{RANGLE_14L}{getWeather()}{RANGLE_14R}{REGION}{RANGLE_11L}{getMemory()}{RANGLE_11R}{REGION}{RANGLE_4L}{getPulse()}{RANGLE_4R}{REGION}{RANGLE_7L}{getKeyboard()}{RANGLE_7R}{REGION}{RANGLE_12L}{getDateTime()}{RANGLE_12R}{REGION}{RESET}"
 
     # LEFT ANGLES with Battery(uses =< _10 colours for Dracula theme)
     #let sStatusString = fmt"{LANGLE_11L}{getArchUpdates()}{LANGLE_11R}{REGION}{LANGLE_13L}{getWeather()}{LANGLE_13R}{REGION}{LANGLE_7L}{getMemory()}{LANGLE_7R}{REGION}{LANGLE_15L}{getBatStatus()}{LANGLE_15R}{REGION}{LANGLE_14L}{getAlsa()}{LANGLE_14R}{REGION}{LANGLE_4L}{getKeyboard()}{LANGLE_4R}{REGION}{LANGLE_12L}{getDateTime()}{LANGLE_12R}{REGION}{RESET}"
