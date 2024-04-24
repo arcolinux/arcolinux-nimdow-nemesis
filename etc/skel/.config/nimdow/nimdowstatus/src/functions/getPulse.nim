@@ -1,7 +1,9 @@
 
 proc getPulse(): string = 
-  let sPulseVol = execProcess("pactl get-sink-volume @DEFAULT_SINK@").split(" / ")[1].strip
-  if sPulseVol == "0%":
-    return MUTE_ICON & " " & sPulseVol
+  let volLevel = execProcess("pactl get-sink-volume @DEFAULT_SINK@").split(" / ")[1].strip
+  let isMuted = execProcess("pactl get-sink-mute @DEFAULT_SINK@").contains("yes")
+  let icon = if volLevel == "0%" or isMuted:
+    MUTE_ICON
   else:
-    return VOL_ICON & " " & sPulseVol
+    VOL_ICON
+  icon & " " & volLevel
