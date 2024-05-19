@@ -9,9 +9,9 @@ proc getArchUpdates(): string =
     uTimeStamp = some(now())
     try:
       sUpdates = execProcess("checkupdates | wc -l") 
+      discard parseInt(sUpdate)
       result = UPDATE_ICON & sUpdates
     except CatchableError as e:
-      echo "An Error: ", e.repr
       result = UPDATE_ICON & " N/A"
     finally:
       discard 
