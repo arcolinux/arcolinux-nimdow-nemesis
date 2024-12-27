@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
-$HOME/.config/nimdow/nimdowstatus/bin/NimdowStatus &
+$HOME/.config/nimdow/nimdowstatus/bin/nStatus &
 
 # keyboard
 # setxkbmap be
