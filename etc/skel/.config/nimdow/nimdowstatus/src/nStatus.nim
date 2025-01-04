@@ -65,3 +65,4 @@ let
 # #################
 while true:
   bar.update(connectChecker.hasReconnected())
+  sleep(100)
