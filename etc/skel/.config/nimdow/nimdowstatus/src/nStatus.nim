@@ -50,15 +50,15 @@ let
   sMemory = initSegment(icon = " ", color = Nord.nord11, body = getMemory, interval = initDuration(seconds = 1))
   sAlsa = initSegment(color = Nord.nord12, body = getAlsa)
   #sPulse = initSegment(color = "##D4625E", body = getPulse)
-  sBluetooth = initSegment(icon = "", color = "#D4625E", body = getBluetooth, interval = initDuration(seconds = 5))
-  sBatStatus = initSegment(color = "#D4625E", body = getBatStatus, interval = initDuration(seconds = 2))
+  #sBluetooth = initSegment(icon = "", color = "#D4625E", body = getBluetooth, interval = initDuration(seconds = 5))
+  #sBatStatus = initSegment(color = "#D4625E", body = getBatStatus, interval = initDuration(seconds = 2))
   sDateTime = initSegment(icon = " ", color = Nord.nord13, body = getDateTime)
   sKeyboard = initSegment(icon = " ", color = Nord.nord14, body = getKeyboard, interval = initDuration(minutes = 10))
   sWifi = initSegment(isShowAlways = true, color = Nord.nord15, body = getWifi, interval = initDuration(seconds = 2))
 
 
   #sPulse, sBlueTooth, sBatStatus
-  bar = initBar(segments = @[sArchUpdates, sWeather, sMemory, sAlsa, sBlueTooth, sBatStatus, sDateTime, sKeyboard, sWifi])
+  bar = initBar(segments = @[sArchUpdates, sWeather, sMemory, sAlsa, sDateTime, sKeyboard, sWifi])
 
   ###################
 # Status bar loop
